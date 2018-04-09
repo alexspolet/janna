@@ -1,6 +1,7 @@
 <?php
-
+add_action('after_setup_theme' , 'janna_theme_setup');
 add_action('wp_enqueue_scripts' , 'janna_theme_scripts');
+
 
 function janna_theme_scripts(){
 	wp_enqueue_style('bootstrap-css' , get_template_directory_uri() . '/css/bootstrap.min.css');
@@ -15,11 +16,27 @@ function janna_theme_scripts(){
 	wp_enqueue_script('agency' , get_template_directory_uri() . '/js/agency.js');
 
 }
-/*
 
-<!-- JS Plugins -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/css3-animate-it.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-<script src="js/agency.js"></script>
+function janna_theme_setup() {
+	load_theme_textdomain( 'janna_theme' );
+	add_theme_support( 'title-tag' );
+	add_theme_support( 'custom-logo',
+		[ 'height' => 31,
+			'width' => 134,
+			'flex-height' => true
+
+		]
+	);
+	add_theme_support('post-thumbnails');
+	set_post_thumbnail_size(730 , 446);
+	add_theme_support('html5' ,
+	['search_form' , 'comment-form' , 'comment-list' , 'gallery' , 'caption']
+		);
+	add_theme_support('post-formats' ,
+		['aside' ,
+			'video' ,
+			'image',
+			'gallery'
+			]
+		);
+}
