@@ -39,4 +39,6 @@ function janna_theme_setup() {
 			'gallery'
 			]
 		);
+
+register_nav_menu('primary' , 'Primary menu');
 }

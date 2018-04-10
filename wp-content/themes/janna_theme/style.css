@@ -32,6 +32,9 @@ body {
     position:relative;
     font-weight:300;
 }
+body.logged-in .navbar-fixed-top{
+    top: 30px;
+}
 section {
     clear: both;
     padding:110px 0;
