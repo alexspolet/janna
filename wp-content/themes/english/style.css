@@ -52,3 +52,115 @@ article.post:last-of-type{
     margin-top: 30px;
     border-top: 2px solid #999;
 }
+
+ /* Navigation Menus */
+
+.site-nav ul{
+    margin: 0;
+    padding: 0;
+}
+
+.site-nav ul:before,
+.site-nav ul:after{
+    content: "";
+    display: table;
+}
+
+.site-nav ul:after{
+    clear: both;
+}
+
+.site-nav ul{
+    *zoom: 1;
+}
+
+.site-nav ul li{
+    list-style: none;
+    float: left;
+    margin: 5px;
+    margin-bottom: 0;
+}
+
+/* Site Header Menu */
+
+.site-header nav ul li a:link,
+.site-header nav ul li a:visited{
+    display: block;
+    padding: 10px 19px;
+    border: 1px solid #BBB;
+    border-bottom: none;
+    text-decoration: none;
+}
+
+.site-header nav ul li a:hover{
+    background-color: #ECECEC;
+}
+
+.site-header nav ul li.current-menu-item a:link,
+.site-header nav ul li.current-menu-item a:visited{
+    background-color: #006ec3;
+    color:#FFF;
+}
+
+
+/* Footer Menu */
+
+.site-footer nav ul li{
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 1px dotted #BBB;
+
+}
+
+.site-footer nav ul li:last-of-type{
+    border-right: none;
+}
+
+
+/* Page Layoute */
+
+article.page h1{
+    font-size: 300%;
+}
+
+/* Two Column Title Layout */
+h1.title-column{
+    width: 30%;
+    float: left;
+}
+div.text-column{
+    width: 70%;
+    float: right;
+}
+
+/* slightly enhanced, universal clearfix hack */
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+
+div.info-box{
+    width: 30%;
+    float: right;
+    margin: 0 0 30px 30px;
+    padding: 20px;
+    background-color: #EEE;
+}
+
+div.info-box h4{
+     margin-bottom: 6px;
+ }
+
+div.info-box p{
+    font-size: 85%;
+}
